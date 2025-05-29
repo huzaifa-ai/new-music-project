@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_ic_weather.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/ic_weather.xml"
+    },
+    {
+        "merged": "com.example.mentalfitness.app-merged_res-29:/layout_activity_music.xml.flat",
+        "source": "com.example.mentalfitness.app-main-31:/layout/activity_music.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/layout_activity_home.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/layout/activity_home.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/anim_slide_out_right.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/anim/slide_out_right.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_ic_journal.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/ic_journal.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_ic_face.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/ic_face.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_edit_text_background.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/edit_text_background.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_button_background.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/button_background.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_logo.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/logo.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_ic_charts.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/ic_charts.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_ic_music.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/ic_music.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/anim_slide_out_left.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/anim/slide_out_left.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_ic_fire.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/ic_fire.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/anim_slide_in_left.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/anim/slide_in_left.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/anim_item_animation_fall_down.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/anim/item_animation_fall_down.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/layout_activity_main.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_ic_workout.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/ic_workout.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/anim_slide_in_right.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/anim/slide_in_right.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_ic_steps.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/ic_steps.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_ic_music_health.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/ic_music_health.xml"
+    },
+    {
+        "merged": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-merged_res-29:/drawable_ic_assessment.xml.flat",
+        "source": "/Users/affanlaptops/.gradle/daemon/8.5/com.example.mentalfitness.app-main-31:/drawable/ic_assessment.xml"
+    },
+    {
+        "merged": "com.example.mentalfitness.app-merged_res-29:/xml_network_security_config.xml.flat",
+        "source": "com.example.mentalfitness.app-main-31:/xml/network_security_config.xml"
+    }
+]

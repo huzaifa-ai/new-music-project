@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Mental Fitness</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="mental_health">Mental Health</string>
+    
+    <!-- Card titles -->
+    <string name="workout_recommendation">Workout Recommendation</string>
+    <string name="facial_expression_analysis">Facial Expression Analysis</string>
+    <string name="weather_based_suggestion">Weather-Based Suggestion</string>
+    <string name="journaling">Journaling</string>
+    <string name="charts">Charts</string>
+    <string name="music_health_recommendation">Music Health Recommendation</string>
+    <string name="assessment">Assessment</string>
+    <string name="music">Music</string>
+    
+    <!-- Content descriptions -->
+    <string name="app_logo">App Logo</string>
+    <string name="workout_icon">Workout Icon</string>
+    <string name="facial_expression_icon">Facial Expression Icon</string>
+    <string name="weather_icon">Weather Icon</string>
+    <string name="journal_icon">Journal Icon</string>
+    <string name="charts_icon">Charts Icon</string>
+    <string name="music_health_icon">Music Health Icon</string>
+    <string name="assessment_icon">Assessment Icon</string>
+    <string name="music_icon">Music Icon</string>
+    <string name="calories_icon">Calories Icon</string>
+    <string name="steps_icon">Steps Icon</string>
+</resources>

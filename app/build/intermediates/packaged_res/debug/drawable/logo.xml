@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="500"
+    android:viewportHeight="500">
+    
+    <!-- Brain outline -->
+    <path
+        android:fillColor="@color/colorPrimary"
+        android:pathData="M250,100C150,100,100,175,100,250S150,400,250,400s150,-75,150,-150S350,100,250,100zM250,380c-75,0,-130,-55,-130,-130s55,-130,130,-130s130,55,130,130S325,380,250,380z"/>
+    
+    <!-- Brain details -->
+    <path
+        android:fillColor="@color/colorPrimary"
+        android:pathData="M180,200c-15,0,-25,10,-25,25s10,25,25,25s25,-10,25,-25S195,200,180,200z"/>
+    <path
+        android:fillColor="@color/colorPrimary"
+        android:pathData="M320,200c-15,0,-25,10,-25,25s10,25,25,25s25,-10,25,-25S335,200,320,200z"/>
+    <path
+        android:fillColor="@color/colorPrimary"
+        android:pathData="M250,250c-15,0,-25,10,-25,25s10,25,25,25s25,-10,25,-25S265,250,250,250z"/>
+    <path
+        android:fillColor="@color/colorPrimary"
+        android:pathData="M200,300c-15,0,-25,10,-25,25s10,10,25,10s25,-10,25,-25S215,300,200,300z"/>
+    <path
+        android:fillColor="@color/colorPrimary"
+        android:pathData="M300,300c-15,0,-25,10,-25,25s10,10,25,10s25,-10,25,-25S315,300,300,300z"/>
+    
+    <!-- Checkmark -->
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M210,250L250,290L330,210L350,230L250,330L190,270Z"/>
+</vector>
