@@ -10,6 +10,14 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
 
     <permission
         android:name="com.example.mentalfitness.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -42,6 +50,33 @@
         <activity
             android:name="com.example.mentalfitness.MusicActivity"
             android:exported="false" />
+        <activity
+            android:name="com.example.mentalfitness.FacialExpressionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mentalfitness.WorkoutActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mentalfitness.WeatherActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mentalfitness.JournalingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mentalfitness.ChartsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mentalfitness.AssessmentActivity"
+            android:exported="false" />
+
+        <service
+            android:name="androidx.camera.core.impl.MetadataHolderService"
+            android:enabled="false"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+        </service>
 
         <provider
             android:name="androidx.startup.InitializationProvider"

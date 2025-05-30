@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mentalfitness.app-mergeDebugResources-27:/values-nb/values-nb.xml",
+            "outputFile": "com.example.mentalfitness.app-mergeDebugResources-31:/values-nb/values-nb.xml",
             "map": [
                 {
                     "source": "/Users/affanlaptops/.gradle/caches/transforms-3/0727e35ddcdc8de4df2ed1acb80a64e1/transformed/core-1.9.0/res/values-nb/values-nb.xml",

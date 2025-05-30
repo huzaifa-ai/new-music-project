@@ -4,12 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,8 +35,18 @@ public class MusicActivity extends AppCompatActivity {
     private static final String TAG = "MusicActivity";
     
     private CardView happyCard, sadCard, relaxedCard, energeticCard;
-    private TextView titleTextView;
+    private TextView titleTextView, currentTrackText, currentArtistText;
+    private ImageButton playPauseButton, previousButton, nextButton;
+    private SeekBar progressSeekBar;
     private String accessToken = "";
+    
+    // Media Player
+    private MediaPlayer mediaPlayer;
+    private Handler progressHandler = new Handler();
+    private boolean isPlaying = false;
+    private String currentEmotion = "";
+    private String[] currentPlaylist;
+    private int currentTrackIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,49 +54,127 @@ public class MusicActivity extends AppCompatActivity {
         setContentView(R.layout.activity_music);
 
         // Initialize UI elements
-        titleTextView = findViewById(R.id.musicTitleTextView);
-        happyCard = findViewById(R.id.happyCard);
-        sadCard = findViewById(R.id.sadCard);
-        relaxedCard = findViewById(R.id.relaxedCard);
-        energeticCard = findViewById(R.id.energeticCard);
-
+        initializeViews();
+        
         // Get Spotify access token
         getSpotifyAccessToken();
 
         // Set up emotion card click listeners
         setupEmotionCardListeners();
+        
+        // Set up media player controls
+        setupMediaPlayerControls();
+    }
+    
+    private void initializeViews() {
+        titleTextView = findViewById(R.id.musicTitleTextView);
+        happyCard = findViewById(R.id.happyCard);
+        sadCard = findViewById(R.id.sadCard);
+        relaxedCard = findViewById(R.id.relaxedCard);
+        energeticCard = findViewById(R.id.energeticCard);
+        
+        // Media player controls
+        playPauseButton = findViewById(R.id.playPauseButton);
+        previousButton = findViewById(R.id.previousButton);
+        nextButton = findViewById(R.id.nextButton);
+        progressSeekBar = findViewById(R.id.progressSeekBar);
+        currentTrackText = findViewById(R.id.currentTrackText);
+        currentArtistText = findViewById(R.id.currentArtistText);
+    }
+    
+    private void setupMediaPlayerControls() {
+        playPauseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                togglePlayPause();
+            }
+        });
+        
+        previousButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playPreviousTrack();
+            }
+        });
+        
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playNextTrack();
+            }
+        });
+        
+        progressSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (fromUser && mediaPlayer != null) {
+                    mediaPlayer.seekTo(progress);
+                }
+            }
+            
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+            
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
     }
 
     private void setupEmotionCardListeners() {
         happyCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                searchAndPlayMusic("happy upbeat pop", "😊 Happy");
+                selectEmotion("happy", "😊 Happy");
+                highlightSelectedEmotion(happyCard);
             }
         });
 
         sadCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                searchAndPlayMusic("sad melancholy indie", "😢 Sad");
+                selectEmotion("sad", "😢 Sad");
+                highlightSelectedEmotion(sadCard);
             }
         });
 
         relaxedCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                searchAndPlayMusic("relaxing ambient chill", "😌 Relaxed");
+                selectEmotion("chill", "😌 Relaxed");
+                highlightSelectedEmotion(relaxedCard);
             }
         });
 
         energeticCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                searchAndPlayMusic("energetic workout rock", "⚡ Energetic");
+                selectEmotion("energetic", "⚡ Energetic");
+                highlightSelectedEmotion(energeticCard);
             }
         });
     }
-
+    
+    private void highlightSelectedEmotion(CardView selectedCard) {
+        // Reset all cards
+        resetCardHighlights();
+        
+        // Highlight selected card
+        float dpValue = 16 * getResources().getDisplayMetrics().density;
+        selectedCard.setCardElevation(dpValue);
+        selectedCard.setScaleX(1.05f);
+        selectedCard.setScaleY(1.05f);
+    }
+    
+    private void resetCardHighlights() {
+        CardView[] cards = {happyCard, sadCard, relaxedCard, energeticCard};
+        float normalElevation = 8 * getResources().getDisplayMetrics().density;
+        for (CardView card : cards) {
+            card.setCardElevation(normalElevation);
+            card.setScaleX(1.0f);
+            card.setScaleY(1.0f);
+        }
+    }
+    
     private void getSpotifyAccessToken() {
         new AsyncTask<Void, Void, String>() {
             @Override
@@ -90,23 +183,19 @@ public class MusicActivity extends AppCompatActivity {
                     URL url = new URL("https://accounts.spotify.com/api/token");
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     
-                    // Set up the connection
                     connection.setRequestMethod("POST");
                     connection.setDoOutput(true);
                     connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
                     
-                    // Create authorization header
                     String auth = CLIENT_ID + ":" + CLIENT_SECRET;
                     String encodedAuth = Base64.getEncoder().encodeToString(auth.getBytes());
                     connection.setRequestProperty("Authorization", "Basic " + encodedAuth);
                     
-                    // Send request body
                     OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream());
                     writer.write("grant_type=client_credentials");
                     writer.flush();
                     writer.close();
                     
-                    // Read response
                     BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                     StringBuilder response = new StringBuilder();
                     String line;
@@ -115,7 +204,6 @@ public class MusicActivity extends AppCompatActivity {
                     }
                     reader.close();
                     
-                    // Parse JSON response
                     JSONObject jsonResponse = new JSONObject(response.toString());
                     return jsonResponse.getString("access_token");
                     
@@ -137,18 +225,24 @@ public class MusicActivity extends AppCompatActivity {
         }.execute();
     }
 
-    private void searchAndPlayMusic(String query, String emotion) {
+    private void selectEmotion(String emotion, String emotionName) {
         if (accessToken.isEmpty()) {
             Toast.makeText(this, "Connecting to Spotify...", Toast.LENGTH_SHORT).show();
             return;
         }
+        
+        currentEmotion = emotionName;
+        searchMusicForEmotion(emotion);
+    }
 
-        new AsyncTask<String, Void, String>() {
+    private void searchMusicForEmotion(String emotion) {
+        new AsyncTask<String, Void, String[]>() {
             @Override
-            protected String doInBackground(String... params) {
+            protected String[] doInBackground(String... params) {
                 try {
-                    String searchQuery = params[0].replace(" ", "%20");
-                    URL url = new URL("https://api.spotify.com/v1/search?q=" + searchQuery + "&type=track&limit=1");
+                    String query = getQueryForEmotion(params[0]);
+                    String searchQuery = query.replace(" ", "%20");
+                    URL url = new URL("https://api.spotify.com/v1/search?q=" + searchQuery + "&type=track&limit=10");
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     
                     connection.setRequestMethod("GET");
@@ -162,19 +256,20 @@ public class MusicActivity extends AppCompatActivity {
                     }
                     reader.close();
                     
-                    // Parse response to get track URI
                     JSONObject jsonResponse = new JSONObject(response.toString());
                     JSONArray tracks = jsonResponse.getJSONObject("tracks").getJSONArray("items");
                     
-                    if (tracks.length() > 0) {
-                        JSONObject track = tracks.getJSONObject(0);
+                    String[] playlist = new String[tracks.length()];
+                    for (int i = 0; i < tracks.length(); i++) {
+                        JSONObject track = tracks.getJSONObject(i);
                         String trackName = track.getString("name");
                         String artistName = track.getJSONArray("artists").getJSONObject(0).getString("name");
-                        String spotifyUri = track.getString("uri");
-                        String externalUrl = track.getJSONObject("external_urls").getString("spotify");
+                        String previewUrl = track.optString("preview_url", "");
                         
-                        return trackName + "|" + artistName + "|" + spotifyUri + "|" + externalUrl;
+                        playlist[i] = trackName + "|" + artistName + "|" + previewUrl;
                     }
+                    
+                    return playlist;
                     
                 } catch (Exception e) {
                     Log.e(TAG, "Error searching tracks: " + e.getMessage());
@@ -183,42 +278,138 @@ public class MusicActivity extends AppCompatActivity {
             }
             
             @Override
-            protected void onPostExecute(String result) {
-                if (result != null) {
-                    String[] parts = result.split("\\|");
-                    String trackName = parts[0];
-                    String artistName = parts[1];
-                    String spotifyUri = parts[2];
-                    String externalUrl = parts[3];
-                    
-                    // Try to open in Spotify app, fallback to web player
-                    openSpotifyTrack(spotifyUri, externalUrl, trackName, artistName, emotion);
+            protected void onPostExecute(String[] playlist) {
+                if (playlist != null && playlist.length > 0) {
+                    currentPlaylist = playlist;
+                    currentTrackIndex = 0;
+                    playCurrentTrack();
+                    Toast.makeText(MusicActivity.this, "Loaded " + currentEmotion + " playlist", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MusicActivity.this, "No tracks found for " + emotion, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MusicActivity.this, "No tracks found for " + currentEmotion, Toast.LENGTH_SHORT).show();
                 }
             }
-        }.execute(query);
+        }.execute(emotion);
     }
-
-    private void openSpotifyTrack(String spotifyUri, String webUrl, String trackName, String artistName, String emotion) {
+    
+    private String getQueryForEmotion(String emotion) {
+        switch (emotion) {
+            case "happy": return "happy upbeat pop dance";
+            case "sad": return "sad melancholy emotional ballad";
+            case "chill": return "chill relax ambient lofi";
+            case "energetic": return "energetic workout rock electronic";
+            default: return "pop music";
+        }
+    }
+    
+    private void playCurrentTrack() {
+        if (currentPlaylist == null || currentTrackIndex >= currentPlaylist.length) {
+            return;
+        }
+        
+        String[] trackInfo = currentPlaylist[currentTrackIndex].split("\\|");
+        String trackName = trackInfo[0];
+        String artistName = trackInfo[1];
+        String previewUrl = trackInfo[2];
+        
+        if (previewUrl.isEmpty()) {
+            // Skip to next track if no preview available
+            playNextTrack();
+            return;
+        }
+        
+        // Update UI
+        currentTrackText.setText(trackName);
+        currentArtistText.setText(artistName);
+        
+        // Play the track
+        playTrackFromUrl(previewUrl);
+    }
+    
+    private void playTrackFromUrl(String url) {
         try {
-            // Try to open in Spotify app first
-            Intent spotifyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(spotifyUri));
-            spotifyIntent.putExtra(Intent.EXTRA_REFERRER, Uri.parse("android-app://" + getPackageName()));
-            startActivity(spotifyIntent);
+            if (mediaPlayer != null) {
+                mediaPlayer.release();
+            }
             
-            Toast.makeText(this, "Playing " + emotion + " music:\n" + trackName + " by " + artistName, Toast.LENGTH_LONG).show();
+            mediaPlayer = new MediaPlayer();
+            mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            mediaPlayer.setDataSource(url);
+            
+            mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(MediaPlayer mp) {
+                    progressSeekBar.setMax(mp.getDuration());
+                    mp.start();
+                    isPlaying = true;
+                    playPauseButton.setImageResource(R.drawable.ic_pause);
+                    updateProgress();
+                }
+            });
+            
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    playNextTrack();
+                }
+            });
+            
+            mediaPlayer.prepareAsync();
             
         } catch (Exception e) {
-            // Fallback to web player
-            try {
-                Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(webUrl));
-                startActivity(webIntent);
-                Toast.makeText(this, "Opening " + emotion + " music in browser:\n" + trackName + " by " + artistName, Toast.LENGTH_LONG).show();
-            } catch (Exception ex) {
-                Toast.makeText(this, "Unable to open Spotify. Please install the Spotify app.", Toast.LENGTH_LONG).show();
-            }
+            Log.e(TAG, "Error playing track: " + e.getMessage());
+            Toast.makeText(this, "Error playing track", Toast.LENGTH_SHORT).show();
         }
+    }
+    
+    private void togglePlayPause() {
+        if (mediaPlayer == null) return;
+        
+        if (isPlaying) {
+            mediaPlayer.pause();
+            playPauseButton.setImageResource(R.drawable.ic_play);
+            isPlaying = false;
+        } else {
+            mediaPlayer.start();
+            playPauseButton.setImageResource(R.drawable.ic_pause);
+            isPlaying = true;
+            updateProgress();
+        }
+    }
+    
+    private void playNextTrack() {
+        if (currentPlaylist == null) return;
+        
+        currentTrackIndex = (currentTrackIndex + 1) % currentPlaylist.length;
+        playCurrentTrack();
+    }
+    
+    private void playPreviousTrack() {
+        if (currentPlaylist == null) return;
+        
+        currentTrackIndex = (currentTrackIndex - 1 + currentPlaylist.length) % currentPlaylist.length;
+        playCurrentTrack();
+    }
+    
+    private void updateProgress() {
+        if (mediaPlayer != null && isPlaying) {
+            progressSeekBar.setProgress(mediaPlayer.getCurrentPosition());
+            progressHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    updateProgress();
+                }
+            }, 100);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+        progressHandler.removeCallbacksAndMessages(null);
     }
 
     @Override

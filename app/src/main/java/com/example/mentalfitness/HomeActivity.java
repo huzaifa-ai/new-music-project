@@ -70,26 +70,71 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void setupCardClickListeners() {
-        // Set up click listeners for all feature cards
-        CardView[] cards = {workoutCard, facialExpressionCard, weatherCard, journalingCard, 
-                           chartsCard, musicHealthCard, assessmentCard};
-        String[] cardNames = {"Workout Recommendation", "Facial Expression Analysis", 
-                             "Weather-Based Suggestion", "Journaling", "Charts", 
-                             "Music Health Recommendation", "Assessment"};
+        // Workout Recommendation card
+        workoutCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, WorkoutActivity.class);
+                startActivity(intent);
+            }
+        });
         
-        for (int i = 0; i < cards.length; i++) {
-            final String cardName = cardNames[i];
-            cards[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(HomeActivity.this, 
-                                  cardName + " feature clicked", 
-                                  Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
+        // Facial Expression Analysis card
+        facialExpressionCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, FacialExpressionActivity.class);
+                startActivity(intent);
+            }
+        });
         
-        // Special click listener for Music card - launches MusicActivity
+        // Weather-Based Suggestions card
+        weatherCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, WeatherActivity.class);
+                startActivity(intent);
+            }
+        });
+        
+        // Journaling card
+        journalingCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, JournalingActivity.class);
+                startActivity(intent);
+            }
+        });
+        
+        // Charts card
+        chartsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ChartsActivity.class);
+                startActivity(intent);
+            }
+        });
+        
+        // Assessment card
+        assessmentCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, AssessmentActivity.class);
+                startActivity(intent);
+            }
+        });
+        
+        // Music Health Recommendation card - placeholder functionality
+        musicHealthCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(HomeActivity.this, 
+                              "Music Health Recommendation feature clicked", 
+                              Toast.LENGTH_SHORT).show();
+            }
+        });
+        
+        // Music card - launches MusicActivity
         musicCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

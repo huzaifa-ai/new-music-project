@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mentalfitness.app-mergeDebugResources-27:/values-kk/values-kk.xml",
+            "outputFile": "com.example.mentalfitness.app-mergeDebugResources-31:/values-kk/values-kk.xml",
             "map": [
                 {
                     "source": "/Users/affanlaptops/.gradle/caches/transforms-3/5ccec04eabfa88a4036cb87d71914154/transformed/material-1.9.0/res/values-kk/values-kk.xml",

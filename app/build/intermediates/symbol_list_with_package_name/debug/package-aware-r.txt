@@ -636,6 +636,7 @@ attr imagePanX
 attr imagePanY
 attr imageRotate
 attr imageZoom
+attr implementationMode
 attr indeterminateAnimationType
 attr indeterminateProgressStyle
 attr indicatorColor
@@ -996,6 +997,7 @@ attr round
 attr roundPercent
 attr saturation
 attr scaleFromTextSize
+attr scaleType
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
@@ -2922,6 +2924,9 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_background
+drawable button_background_secondary
+drawable camera_overlay_background
+drawable control_button_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2946,6 +2951,10 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_music
 drawable ic_music_health
+drawable ic_next
+drawable ic_pause
+drawable ic_play
+drawable ic_previous
 drawable ic_search_black_24
 drawable ic_steps
 drawable ic_weather
@@ -3022,6 +3031,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable play_button_background
+drawable scan_button_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3094,6 +3105,9 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_text
 id actions
+id activityChartContainer
+id activityChartTitle
+id activitySummaryText
 id activity_chooser_view_content
 id add
 id alertTitle
@@ -3109,6 +3123,7 @@ id appTitle
 id arc
 id asConfigured
 id assessmentCard
+id assessmentTitleText
 id async
 id auto
 id autoComplete
@@ -3125,10 +3140,13 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id buttonLayout
 id buttonPanel
 id cache_measures
 id callMeasure
 id caloriesTextView
+id cameraCard
+id cameraPreview
 id cancel_button
 id carryVelocity
 id center
@@ -3144,12 +3162,14 @@ id checkbox
 id checked
 id chronometer
 id circle_center
+id clearButton
 id clear_text
 id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id compatible
 id compress
 id confirm_button
 id constraint
@@ -3162,7 +3182,12 @@ id coordinator
 id cos
 id counterclockwise
 id cradle
+id currentArtistText
+id currentDateText
+id currentMoodText
 id currentState
+id currentTrackText
+id currentWeatherText
 id custom
 id customPanel
 id cut
@@ -3178,6 +3203,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id detectionStatusText
 id dialog_button
 id dimensions
 id direct
@@ -3203,17 +3229,25 @@ id edge
 id edit_query
 id elastic
 id embed
+id emotionRow1
+id emotionRow2
+id emotionStatusText
 id end
 id endToStart
 id energeticCard
 id enterAlways
 id enterAlwaysCollapsed
+id entriesContainer
+id entryTitle
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id facialExpressionCard
 id fade
 id fill
+id fillCenter
+id fillEnd
+id fillStart
 id fill_horizontal
 id fill_vertical
 id filled
@@ -3222,6 +3256,8 @@ id fitEnd
 id fitStart
 id fitToContents
 id fitXY
+id fitnessCard
+id fitnessLevelText
 id fixed
 id flip
 id floating
@@ -3229,6 +3265,7 @@ id forever
 id fragment_container_view_tag
 id frost
 id fullscreen_header
+id generateWorkoutButton
 id ghost_view
 id ghost_view_holder
 id gone
@@ -3259,10 +3296,13 @@ id inward
 id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
+id journalEntryCard
+id journalEntryEdit
 id journalingCard
 id jumpToEnd
 id jumpToStart
 id labeled
+id lastAssessmentText
 id layout
 id left
 id leftToRight
@@ -3310,6 +3350,14 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
+id moodCard
+id moodChartContainer
+id moodChartTitle
+id moodScrollView
+id moodSelectorLayout
+id moodSelectorTitle
+id moodSuggestionText
+id moodTrendText
 id motion_base
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
@@ -3337,6 +3385,7 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id musicCard
 id musicHealthCard
+id musicPlayerCard
 id musicTitleTextView
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
@@ -3348,6 +3397,7 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id nextButton
 id noScroll
 id noState
 id none
@@ -3374,17 +3424,28 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id performance
 id pin
+id playPauseButton
 id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
+id previousButton
+id previousEntriesTitle
+id progressSeekBar
 id progress_circular
 id progress_horizontal
+id questionsContainer
 id radio
 id ratio
+id recommendedWorkoutText
 id rectangles
+id refreshDataButton
+id refreshWeatherButton
 id relaxedCard
+id resultCard
+id resultText
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3393,10 +3454,12 @@ id right_side
 id rounded
 id row_index_key
 id sadCard
+id saveEntryButton
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scanButton
 id screen
 id scroll
 id scrollIndicatorDown
@@ -3429,6 +3492,7 @@ id search_view_toolbar_container
 id search_voice_btn
 id select_dialog_listview
 id selected
+id selectedMoodText
 id selection_type
 id sharedValueSet
 id sharedValueUnset
@@ -3459,17 +3523,22 @@ id src_over
 id standard
 id start
 id startHorizontal
+id startNewAssessmentButton
 id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
 id statsCardView
+id statsContainer
+id statsTitle
 id stepsTextView
 id stop
 id stretch
 id submenuarrow
+id submitAssessmentButton
 id submit_area
 id subtitleTextView
+id suggestionsContainer
 id supportScrollUp
 id tabMode
 id tag_accessibility_actions
@@ -3485,6 +3554,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id temperatureText
 id text
 id text2
 id textEnd
@@ -3534,11 +3604,14 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id weatherCard
+id weeklyOverviewCard
+id weeklyOverviewText
 id west
 id withText
 id with_icon
 id withinBounds
 id workoutCard
+id workoutListContainer
 id wrap
 id wrap_content
 id wrap_content_constrained
@@ -3657,9 +3730,15 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_assessment
+layout activity_charts
+layout activity_facial_expression
 layout activity_home
+layout activity_journaling
 layout activity_main
 layout activity_music
+layout activity_weather
+layout activity_workout
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -5135,6 +5214,7 @@ styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
+styleable PreviewView implementationMode scaleType
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode
 styleable RadialViewGroup materialCircleRadius
 styleable RangeSlider minSeparation values
