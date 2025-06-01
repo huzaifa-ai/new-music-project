@@ -75,6 +75,7 @@ id logoImageView
 id moodCard
 id moodChartContainer
 id moodChartTitle
+id moodFitnessLayout
 id moodScrollView
 id moodSelectorLayout
 id moodSelectorTitle
@@ -117,6 +118,7 @@ id weeklyOverviewCard
 id weeklyOverviewText
 id workoutCard
 id workoutListContainer
+id workoutLocationText
 layout activity_assessment
 layout activity_charts
 layout activity_facial_expression

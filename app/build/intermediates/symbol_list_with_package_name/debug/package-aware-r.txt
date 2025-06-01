@@ -3353,6 +3353,7 @@ id month_title
 id moodCard
 id moodChartContainer
 id moodChartTitle
+id moodFitnessLayout
 id moodScrollView
 id moodSelectorLayout
 id moodSelectorTitle
@@ -3612,6 +3613,7 @@ id with_icon
 id withinBounds
 id workoutCard
 id workoutListContainer
+id workoutLocationText
 id wrap
 id wrap_content
 id wrap_content_constrained

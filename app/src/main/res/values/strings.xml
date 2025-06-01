@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Mental Fitness</string>
+    <string name="app_name">Fitness App</string>
     <string name="login">Login</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="mental_health">Mental Health</string>
+    <string name="mental_health">Fitness App</string>
     
     <!-- Card titles -->
     <string name="workout_recommendation">Workout Recommendation</string>

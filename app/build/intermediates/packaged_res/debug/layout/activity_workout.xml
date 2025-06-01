@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="💪 Workout Recommendations"
+            android:text="💪 Weather-Based Workout"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Personalized workouts based on your mood and fitness level"
+            android:text="Personalized workouts based on weather, mood and fitness level"
             android:textAlignment="center"
             android:textColor="@color/colorText"
             android:textSize="14sp"
@@ -38,17 +38,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
-        <!-- Mood Selection Card -->
+        <!-- Weather Card -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/moodCard"
+            android:id="@+id/weatherCard"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="10dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="6dp"
-            app:cardBackgroundColor="#E8F5E8"
-            app:layout_constraintEnd_toStartOf="@+id/fitnessCard"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="#E3F2FD"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/subtitleTextView">
 
@@ -57,104 +56,186 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="24dp">
 
                 <TextView
+                    android:id="@+id/currentWeatherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="😊"
-                    android:textSize="32sp" />
+                    android:text="⛅ Partly Cloudy"
+                    android:textColor="#1976D2"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/currentMoodText"
+                    android:id="@+id/workoutLocationText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Current Mood: Stressed"
-                    android:textAlignment="center"
-                    android:textColor="#2E7D32"
-                    android:textSize="14sp"
+                    android:text="You should work out Indoor"
+                    android:textColor="#1976D2"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/temperatureText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="23°C"
+                    android:textColor="#1976D2"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Tap to change"
+                    android:layout_marginTop="8dp"
+                    android:text="Tap to change weather"
                     android:textColor="#666666"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Fitness Level Card -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/fitnessCard"
+        <!-- Refresh Weather Button -->
+        <Button
+            android:id="@+id/refreshWeatherButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_background"
+            android:text="🔄 Update Weather"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weatherCard" />
+
+        <!-- Mood and Fitness Section -->
+        <LinearLayout
+            android:id="@+id/moodFitnessLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="6dp"
-            app:cardBackgroundColor="#E3F2FD"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/moodCard"
-            app:layout_constraintTop_toBottomOf="@+id/subtitleTextView">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/refreshWeatherButton">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <!-- Mood Selection Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/moodCard"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#E8F5E8">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="🏃‍♂️"
-                    android:textSize="32sp" />
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/fitnessLevelText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Fitness Level: Beginner"
-                    android:textAlignment="center"
-                    android:textColor="#1976D2"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="😊"
+                        android:textSize="24sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/currentMoodText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Current Mood: Stressed"
+                        android:textAlignment="center"
+                        android:textColor="#2E7D32"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Tap to change"
+                        android:textColor="#666666"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Fitness Level Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fitnessCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#E3F2FD">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Tap to change"
-                    android:textColor="#666666"
-                    android:textSize="12sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏃‍♂️"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/fitnessLevelText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Fitness Level: Beginner"
+                        android:textAlignment="center"
+                        android:textColor="#1976D2"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Tap to change"
+                        android:textColor="#666666"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
         <!-- Generate Workout Button -->
         <Button
             android:id="@+id/generateWorkoutButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_background"
-            android:text="Generate Workout Plan"
+            android:text="Generate Weather-Based Workout Plan"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/moodCard" />
+            app:layout_constraintTop_toBottomOf="@+id/moodFitnessLayout" />
 
         <!-- Recommended Workout Section -->
         <TextView
             android:id="@+id/recommendedWorkoutText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
             android:text="Tap 'Generate Workout Plan' to get started"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp"
