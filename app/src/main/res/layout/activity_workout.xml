@@ -1,259 +1,324 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
+    android:padding="24dp"
     tools:context=".WorkoutActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+    <!-- Age Field -->
+    <TextView
+        android:id="@+id/ageLabel"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20dp">
+        android:layout_marginTop="32dp"
+        android:text="Age"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/titleTextView"
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Enter age"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textColor="@color/colorText"
+        android:textColorHint="#999999"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/genderLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageLabel"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <!-- Gender Field -->
+    <TextView
+        android:id="@+id/genderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ageEditText"
+        app:layout_constraintTop_toTopOf="@+id/ageLabel" />
+
+    <Spinner
+        android:id="@+id/genderSpinner"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/genderLabel"
+        app:layout_constraintTop_toBottomOf="@+id/genderLabel"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <!-- Body Fat Field -->
+    <TextView
+        android:id="@+id/bodyFatLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Body Fat (%)"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageEditText" />
+
+    <EditText
+        android:id="@+id/bodyFatEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Enter body fat %"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="@color/colorText"
+        android:textColorHint="#999999"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/vo2MaxLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bodyFatLabel"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <!-- VO2 Max Field -->
+    <TextView
+        android:id="@+id/vo2MaxLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VO₂ Max"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bodyFatEditText"
+        app:layout_constraintTop_toTopOf="@+id/bodyFatLabel" />
+
+    <EditText
+        android:id="@+id/vo2MaxEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Enter VO₂ Max"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="@color/colorText"
+        android:textColorHint="#999999"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vo2MaxLabel"
+        app:layout_constraintTop_toBottomOf="@+id/vo2MaxLabel"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <!-- Mood Before Workout Field -->
+    <TextView
+        android:id="@+id/moodLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Mood Before Workout"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bodyFatEditText" />
+
+    <EditText
+        android:id="@+id/moodEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="e.g., energetic, stressed, tired"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="@color/colorText"
+        android:textColorHint="#999999"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodLabel" />
+
+    <!-- Workout Intensity Field -->
+    <TextView
+        android:id="@+id/intensityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Workout Intensity"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodEditText" />
+
+    <EditText
+        android:id="@+id/intensityEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="1-10 scale"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="@color/colorText"
+        android:textColorHint="#999999"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intensityLabel" />
+
+    <!-- Recommend Button -->
+    <Button
+        android:id="@+id/recommendButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#4285F4"
+        android:text="Recommend"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intensityEditText" />
+
+    <!-- Recommended Workout Result -->
+    <TextView
+        android:id="@+id/recommendedWorkoutText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Recommended workout: Yoga"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recommendButton" />
+
+    <!-- Workout Status Checkboxes -->
+    <LinearLayout
+        android:id="@+id/checkboxContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recommendedWorkoutText">
+
+        <CheckBox
+            android:id="@+id/workoutDoneCheckbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="💪 Weather-Based Workout"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/subtitleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Personalized workouts based on weather, mood and fitness level"
-            android:textAlignment="center"
+            android:layout_marginEnd="24dp"
+            android:text="Workout done"
             android:textColor="@color/colorText"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+            android:textSize="16sp" />
 
-        <!-- Weather Card -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/weatherCard"
-            android:layout_width="0dp"
+        <CheckBox
+            android:id="@+id/workoutSkippedCheckbox"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="8dp"
-            app:cardBackgroundColor="#E3F2FD"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/subtitleTextView">
+            android:text="Workout skipped"
+            android:textColor="@color/colorText"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Home Tab -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/homeBottomNav"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardElevation="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:padding="24dp">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/currentWeatherText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="⛅ Partly Cloudy"
-                    android:textColor="#1976D2"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/workoutLocationText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="You should work out Indoor"
-                    android:textColor="#1976D2"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/temperatureText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="23°C"
-                    android:textColor="#1976D2"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_home"
+                    android:tint="@color/colorPrimary" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Tap to change weather"
-                    android:textColor="#666666"
+                    android:layout_marginTop="4dp"
+                    android:text="Home"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="12sp"
-                    android:textStyle="italic" />
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Refresh Weather Button -->
-        <Button
-            android:id="@+id/refreshWeatherButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/button_background"
-            android:text="🔄 Update Weather"
-            android:textColor="@android:color/white"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weatherCard" />
-
-        <!-- Mood and Fitness Section -->
-        <LinearLayout
-            android:id="@+id/moodFitnessLayout"
+        <!-- Settings Tab -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/settingsBottomNav"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/refreshWeatherButton">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardElevation="0dp">
 
-            <!-- Mood Selection Card -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/moodCard"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="6dp"
-                app:cardBackgroundColor="#E8F5E8">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_settings"
+                    android:tint="#666666" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="😊"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/currentMoodText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Current Mood: Stressed"
-                        android:textAlignment="center"
-                        android:textColor="#2E7D32"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Tap to change"
-                        android:textColor="#666666"
-                        android:textSize="10sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Fitness Level Card -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fitnessCard"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_weight="1"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="6dp"
-                app:cardBackgroundColor="#E3F2FD">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="🏃‍♂️"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/fitnessLevelText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Fitness Level: Beginner"
-                        android:textAlignment="center"
-                        android:textColor="#1976D2"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Tap to change"
-                        android:textColor="#666666"
-                        android:textSize="10sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-
-        <!-- Generate Workout Button -->
-        <Button
-            android:id="@+id/generateWorkoutButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/button_background"
-            android:text="Generate Weather-Based Workout Plan"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/moodFitnessLayout" />
-
-        <!-- Recommended Workout Section -->
-        <TextView
-            android:id="@+id/recommendedWorkoutText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Tap 'Generate Workout Plan' to get started"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/generateWorkoutButton" />
-
-        <!-- Workout List Container -->
-        <LinearLayout
-            android:id="@+id/workoutListContainer"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recommendedWorkoutText" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView> 
+                    android:layout_marginTop="4dp"
+                    android:text="Settings"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout> 

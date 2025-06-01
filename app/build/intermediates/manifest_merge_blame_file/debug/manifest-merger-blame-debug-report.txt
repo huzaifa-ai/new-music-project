@@ -45,7 +45,7 @@
 26-->[androidx.core:core:1.9.0] /Users/affanlaptops/.gradle/caches/transforms-3/0727e35ddcdc8de4df2ed1acb80a64e1/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 27
 28    <application
-28-->/Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:12:5-53:19
+28-->/Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:12:5-56:19
 29        android:allowBackup="true"
 29-->/Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:13:9-35
 30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -128,44 +128,50 @@
 69-->/Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:51:13-47
 70            android:exported="false" />
 70-->/Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:52:13-37
-71
-72        <service
-72-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:24:9-33:19
-73            android:name="androidx.camera.core.impl.MetadataHolderService"
-73-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:25:13-75
-74            android:enabled="false"
-74-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:26:13-36
-75            android:exported="false" >
-75-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:27:13-37
-76            <meta-data
-76-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:30:13-32:89
-77                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
-77-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:31:17-103
-78                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
-78-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:32:17-86
-79        </service>
-80
-81        <provider
-81-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-82            android:name="androidx.startup.InitializationProvider"
-82-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-83            android:authorities="com.example.mentalfitness.androidx-startup"
-83-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-84            android:exported="false" >
-84-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-85            <meta-data
-85-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-86                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-86-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-87                android:value="androidx.startup" />
-87-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+71        <activity
+71-->/Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:53:9-55:40
+72            android:name="com.example.mentalfitness.SettingsActivity"
+72-->/Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:54:13-45
+73            android:exported="false" />
+73-->/Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:55:13-37
+74
+75        <service
+75-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:24:9-33:19
+76            android:name="androidx.camera.core.impl.MetadataHolderService"
+76-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:25:13-75
+77            android:enabled="false"
+77-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:26:13-36
+78            android:exported="false" >
+78-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:27:13-37
+79            <meta-data
+79-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:30:13-32:89
+80                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+80-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:31:17-103
+81                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+81-->[androidx.camera:camera-camera2:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/AndroidManifest.xml:32:17-86
+82        </service>
+83
+84        <provider
+84-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+85            android:name="androidx.startup.InitializationProvider"
+85-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+86            android:authorities="com.example.mentalfitness.androidx-startup"
+86-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+87            android:exported="false" >
+87-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
 88            <meta-data
-88-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/affanlaptops/.gradle/caches/transforms-3/a6cc2bb92460195c72f6f4263c068b0d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-89                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-89-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/affanlaptops/.gradle/caches/transforms-3/a6cc2bb92460195c72f6f4263c068b0d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+88-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+89                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+89-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
 90                android:value="androidx.startup" />
-90-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/affanlaptops/.gradle/caches/transforms-3/a6cc2bb92460195c72f6f4263c068b0d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-91        </provider>
-92    </application>
-93
-94</manifest>
+90-->[androidx.emoji2:emoji2:1.2.0] /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+91            <meta-data
+91-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/affanlaptops/.gradle/caches/transforms-3/a6cc2bb92460195c72f6f4263c068b0d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+92                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+92-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/affanlaptops/.gradle/caches/transforms-3/a6cc2bb92460195c72f6f4263c068b0d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+93                android:value="androidx.startup" />
+93-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/affanlaptops/.gradle/caches/transforms-3/a6cc2bb92460195c72f6f4263c068b0d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+94        </provider>
+95    </application>
+96
+97</manifest>

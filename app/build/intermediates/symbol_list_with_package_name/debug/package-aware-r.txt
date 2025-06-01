@@ -2934,12 +2934,14 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable edit_text_background
 drawable ic_arrow_back_black_24
+drawable ic_arrow_forward
 drawable ic_assessment
 drawable ic_charts
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_face
 drawable ic_fire
+drawable ic_home
 drawable ic_journal
 drawable ic_keyboard_black_24dp
 drawable ic_m3_chip_check
@@ -2956,6 +2958,7 @@ drawable ic_pause
 drawable ic_play
 drawable ic_previous
 drawable ic_search_black_24
+drawable ic_settings
 drawable ic_steps
 drawable ic_weather
 drawable ic_workout
@@ -3110,6 +3113,8 @@ id activityChartTitle
 id activitySummaryText
 id activity_chooser_view_content
 id add
+id ageEditText
+id ageLabel
 id alertTitle
 id aligned
 id all
@@ -3123,6 +3128,7 @@ id appTitle
 id arc
 id asConfigured
 id assessmentCard
+id assessmentRemindersSwitch
 id assessmentTitleText
 id async
 id auto
@@ -3135,6 +3141,8 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id blocking
+id bodyFatEditText
+id bodyFatLabel
 id bottom
 id bounce
 id bounceBoth
@@ -3159,10 +3167,12 @@ id chain2
 id chains
 id chartsCard
 id checkbox
+id checkboxContainer
 id checked
 id chronometer
 id circle_center
 id clearButton
+id clearDataButton
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -3184,13 +3194,13 @@ id counterclockwise
 id cradle
 id currentArtistText
 id currentDateText
-id currentMoodText
 id currentState
 id currentTrackText
 id currentWeatherText
 id custom
 id customPanel
 id cut
+id darkModeSwitch
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3256,8 +3266,6 @@ id fitEnd
 id fitStart
 id fitToContents
 id fitXY
-id fitnessCard
-id fitnessLevelText
 id fixed
 id flip
 id floating
@@ -3265,7 +3273,8 @@ id forever
 id fragment_container_view_tag
 id frost
 id fullscreen_header
-id generateWorkoutButton
+id genderLabel
+id genderSpinner
 id ghost_view
 id ghost_view_holder
 id gone
@@ -3279,6 +3288,7 @@ id header_title
 id hideable
 id home
 id homeAsUp
+id homeBottomNav
 id honorRequest
 id horizontal_only
 id icon
@@ -3291,6 +3301,8 @@ id immediateStop
 id included
 id indeterminate
 id info
+id intensityEditText
+id intensityLabel
 id invisible
 id inward
 id is_pooling_container_tag
@@ -3350,10 +3362,10 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
-id moodCard
 id moodChartContainer
 id moodChartTitle
-id moodFitnessLayout
+id moodEditText
+id moodLabel
 id moodScrollView
 id moodSelectorLayout
 id moodSelectorTitle
@@ -3385,7 +3397,6 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id musicCard
-id musicHealthCard
 id musicPlayerCard
 id musicTitleTextView
 id navigation_bar_item_active_indicator_view
@@ -3434,12 +3445,14 @@ id postLayout
 id pressed
 id previousButton
 id previousEntriesTitle
+id privacyPolicyButton
 id progressSeekBar
 id progress_circular
 id progress_horizontal
 id questionsContainer
 id radio
 id ratio
+id recommendButton
 id recommendedWorkoutText
 id rectangles
 id refreshDataButton
@@ -3495,6 +3508,8 @@ id select_dialog_listview
 id selected
 id selectedMoodText
 id selection_type
+id settingsBottomNav
+id settingsTitle
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3556,6 +3571,7 @@ id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id temperatureText
+id termsOfServiceButton
 id text
 id text2
 id textEnd
@@ -3604,6 +3620,8 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id vo2MaxEditText
+id vo2MaxLabel
 id weatherCard
 id weeklyOverviewCard
 id weeklyOverviewText
@@ -3612,8 +3630,9 @@ id withText
 id with_icon
 id withinBounds
 id workoutCard
-id workoutListContainer
-id workoutLocationText
+id workoutDoneCheckbox
+id workoutRemindersSwitch
+id workoutSkippedCheckbox
 id wrap
 id wrap_content
 id wrap_content_constrained
@@ -3739,6 +3758,7 @@ layout activity_home
 layout activity_journaling
 layout activity_main
 layout activity_music
+layout activity_settings
 layout activity_weather
 layout activity_workout
 layout custom_dialog

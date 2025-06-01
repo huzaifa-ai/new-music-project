@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-55:12
+ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-58:12
 MERGED from [com.google.android.material:material:1.9.0] /Users/affanlaptops/.gradle/caches/transforms-3/5ccec04eabfa88a4036cb87d71914154/transformed/material-1.9.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/affanlaptops/.gradle/caches/transforms-3/8002349449dcb3a91194b91bc794017c/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.camera:camera-view:1.2.3] /Users/affanlaptops/.gradle/caches/transforms-3/6f01b62d228604fb93241e8198224355/transformed/camera-view-1.2.3/AndroidManifest.xml:17:1-22:12
@@ -50,20 +50,20 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/affanlaptops/.grad
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/affanlaptops/.gradle/caches/transforms-3/f21a8cae8128b7d20113d11ee896e494/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/affanlaptops/.gradle/caches/transforms-3/bd9a0333a484e0e890fa2b8f403281e1/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/affanlaptops/.gradle/caches/transforms-3/ce7c63488568ac7cc3342ca422576a09/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-58:12
 	package
 		ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:3:5-40
 		INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml
-		ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-55:12
+		ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-58:12
 		INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml
-		ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-55:12
+		ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:1-58:12
 		INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:2:11-69
@@ -92,7 +92,7 @@ ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.
 	android:name
 		ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:10:19-63
 application
-ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:12:5-53:19
+ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:12:5-56:19
 MERGED from [com.google.android.material:material:1.9.0] /Users/affanlaptops/.gradle/caches/transforms-3/5ccec04eabfa88a4036cb87d71914154/transformed/material-1.9.0/AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] /Users/affanlaptops/.gradle/caches/transforms-3/5ccec04eabfa88a4036cb87d71914154/transformed/material-1.9.0/AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/affanlaptops/.gradle/caches/transforms-3/8002349449dcb3a91194b91bc794017c/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -191,6 +191,12 @@ ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.
 		ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:52:13-37
 	android:name
 		ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:51:13-47
+activity#com.example.mentalfitness.SettingsActivity
+ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:53:9-55:40
+	android:exported
+		ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:55:13-37
+	android:name
+		ADDED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml:54:13-45
 uses-sdk
 INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/affanlaptops/Downloads/project 4/app/src/main/AndroidManifest.xml

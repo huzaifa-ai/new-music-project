@@ -68,6 +68,9 @@
         <activity
             android:name="com.example.mentalfitness.AssessmentActivity"
             android:exported="false" />
+        <activity
+            android:name="com.example.mentalfitness.SettingsActivity"
+            android:exported="false" />
 
         <service
             android:name="androidx.camera.core.impl.MetadataHolderService"

@@ -19,9 +19,10 @@ public class HomeActivity extends AppCompatActivity {
     private CardView weatherCard;
     private CardView journalingCard;
     private CardView chartsCard;
-    private CardView musicHealthCard;
     private CardView assessmentCard;
     private CardView musicCard;
+    private CardView homeBottomNav;
+    private CardView settingsBottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +44,10 @@ public class HomeActivity extends AppCompatActivity {
         weatherCard = findViewById(R.id.weatherCard);
         journalingCard = findViewById(R.id.journalingCard);
         chartsCard = findViewById(R.id.chartsCard);
-        musicHealthCard = findViewById(R.id.musicHealthCard);
         assessmentCard = findViewById(R.id.assessmentCard);
         musicCard = findViewById(R.id.musicCard);
+        homeBottomNav = findViewById(R.id.homeBottomNav);
+        settingsBottomNav = findViewById(R.id.settingsBottomNav);
 
         // Set example data
         caloriesTextView.setText("216 kcal");
@@ -61,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
     private void animateCards() {
         // Apply a staggered animation to the cards
         CardView[] cards = {workoutCard, facialExpressionCard, weatherCard, journalingCard, 
-                           chartsCard, musicHealthCard, assessmentCard, musicCard};
+                           chartsCard, assessmentCard, musicCard};
         
         for (int i = 0; i < cards.length; i++) {
             CardView card = cards[i];
@@ -124,16 +126,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
         
-        // Music Health Recommendation card - placeholder functionality
-        musicHealthCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(HomeActivity.this, 
-                              "Music Health Recommendation feature clicked", 
-                              Toast.LENGTH_SHORT).show();
-            }
-        });
-        
         // Music card - launches MusicActivity
         musicCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,6 +133,18 @@ public class HomeActivity extends AppCompatActivity {
                 Intent intent = new Intent(HomeActivity.this, MusicActivity.class);
                 startActivity(intent);
             }
+        });
+
+        // Bottom navigation
+        homeBottomNav.setOnClickListener(v -> {
+            // Already on home, show toast
+            Toast.makeText(this, "You are already on Home", Toast.LENGTH_SHORT).show();
+        });
+
+        settingsBottomNav.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+            startActivity(intent);
+            finish();
         });
     }
     
