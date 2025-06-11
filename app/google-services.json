@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "170592380310",
+    "project_id": "fitness-40f23",
+    "storage_bucket": "fitness-40f23.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170592380310:android:bdb9be49093a9b3fb729b7",
+        "android_client_info": {
+          "package_name": "com.example.mentalfitness"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQAqDsm0p7eL_mmnFhIZ92kpDIpFWCRTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+} 

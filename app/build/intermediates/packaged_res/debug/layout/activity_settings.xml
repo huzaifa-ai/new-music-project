@@ -242,6 +242,17 @@
                         android:text="CLEAR ALL DATA"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold" />
+
+                    <!-- Logout Button -->
+                    <Button
+                        android:id="@+id/logoutButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="#FF8C00"
+                        android:text="LOGOUT"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

@@ -1,36 +1,44 @@
-com.example.mentalfitness.app-drawerlayout-1.1.1-0 /Users/affanlaptops/.gradle/caches/transforms-3/06c8f5d8db92242d2dcdf4047c060c4f/transformed/drawerlayout-1.1.1/res
-com.example.mentalfitness.app-core-1.9.0-1 /Users/affanlaptops/.gradle/caches/transforms-3/0727e35ddcdc8de4df2ed1acb80a64e1/transformed/core-1.9.0/res
-com.example.mentalfitness.app-core-ktx-1.9.0-2 /Users/affanlaptops/.gradle/caches/transforms-3/12c1982a98eb311e4505d1e560804634/transformed/core-ktx-1.9.0/res
-com.example.mentalfitness.app-recyclerview-1.3.0-3 /Users/affanlaptops/.gradle/caches/transforms-3/16a07981b2ae826a465d8eac0b5f3257/transformed/recyclerview-1.3.0/res
-com.example.mentalfitness.app-emoji2-1.2.0-4 /Users/affanlaptops/.gradle/caches/transforms-3/422800370d88681b97d8a29879aadaa7/transformed/emoji2-1.2.0/res
-com.example.mentalfitness.app-coordinatorlayout-1.1.0-5 /Users/affanlaptops/.gradle/caches/transforms-3/55d6cd5b68e1547577902675263dc252/transformed/coordinatorlayout-1.1.0/res
-com.example.mentalfitness.app-material-1.9.0-6 /Users/affanlaptops/.gradle/caches/transforms-3/5ccec04eabfa88a4036cb87d71914154/transformed/material-1.9.0/res
-com.example.mentalfitness.app-camera-view-1.2.3-7 /Users/affanlaptops/.gradle/caches/transforms-3/6f01b62d228604fb93241e8198224355/transformed/camera-view-1.2.3/res
-com.example.mentalfitness.app-savedstate-1.2.0-8 /Users/affanlaptops/.gradle/caches/transforms-3/7937ef73e795b09d07dae1a35f02e603/transformed/savedstate-1.2.0/res
-com.example.mentalfitness.app-emoji2-views-helper-1.2.0-9 /Users/affanlaptops/.gradle/caches/transforms-3/7dc50091f3766bd026ae11e5e366762d/transformed/emoji2-views-helper-1.2.0/res
-com.example.mentalfitness.app-constraintlayout-2.1.4-10 /Users/affanlaptops/.gradle/caches/transforms-3/8002349449dcb3a91194b91bc794017c/transformed/constraintlayout-2.1.4/res
-com.example.mentalfitness.app-camera-camera2-1.2.3-11 /Users/affanlaptops/.gradle/caches/transforms-3/9a635123c06d6aec8dbb82ee55b6a18a/transformed/camera-camera2-1.2.3/res
-com.example.mentalfitness.app-appcompat-1.6.1-12 /Users/affanlaptops/.gradle/caches/transforms-3/9aaaf5da9a65b3cbd15e6a22f82ed8f1/transformed/appcompat-1.6.1/res
-com.example.mentalfitness.app-cardview-1.0.0-13 /Users/affanlaptops/.gradle/caches/transforms-3/9bea1c1005848675951aef5ea78d6119/transformed/cardview-1.0.0/res
-com.example.mentalfitness.app-lifecycle-process-2.4.1-14 /Users/affanlaptops/.gradle/caches/transforms-3/a6cc2bb92460195c72f6f4263c068b0d/transformed/lifecycle-process-2.4.1/res
-com.example.mentalfitness.app-camera-core-1.2.3-15 /Users/affanlaptops/.gradle/caches/transforms-3/ae710c9983b5611d1c5d63afccd92565/transformed/camera-core-1.2.3/res
-com.example.mentalfitness.app-lifecycle-runtime-2.5.1-16 /Users/affanlaptops/.gradle/caches/transforms-3/bdd1569a9dbcde6ec46c7e45e499dfd3/transformed/lifecycle-runtime-2.5.1/res
-com.example.mentalfitness.app-appcompat-resources-1.6.1-17 /Users/affanlaptops/.gradle/caches/transforms-3/bdf2df24a8496728d016e6b6ad0f096f/transformed/appcompat-resources-1.6.1/res
-com.example.mentalfitness.app-lifecycle-livedata-core-2.5.1-18 /Users/affanlaptops/.gradle/caches/transforms-3/cd1b43b37f6550d6f9d55f882a7f4f1a/transformed/lifecycle-livedata-core-2.5.1/res
-com.example.mentalfitness.app-annotation-experimental-1.3.0-19 /Users/affanlaptops/.gradle/caches/transforms-3/ce7c63488568ac7cc3342ca422576a09/transformed/annotation-experimental-1.3.0/res
-com.example.mentalfitness.app-viewpager2-1.0.0-20 /Users/affanlaptops/.gradle/caches/transforms-3/ce9ae3c25fe604816772616bc8e2c4d8/transformed/viewpager2-1.0.0/res
-com.example.mentalfitness.app-lifecycle-viewmodel-2.5.1-21 /Users/affanlaptops/.gradle/caches/transforms-3/da97ad57caf2126150a43d37bef53acc/transformed/lifecycle-viewmodel-2.5.1/res
-com.example.mentalfitness.app-fragment-1.3.6-22 /Users/affanlaptops/.gradle/caches/transforms-3/df75ad45e0979ef8254e7a12282c63a0/transformed/fragment-1.3.6/res
-com.example.mentalfitness.app-transition-1.2.0-23 /Users/affanlaptops/.gradle/caches/transforms-3/eaf396da74d95178fc129327b2559ccb/transformed/transition-1.2.0/res
-com.example.mentalfitness.app-startup-runtime-1.1.1-24 /Users/affanlaptops/.gradle/caches/transforms-3/eff2974d1a9611e81c70c3ba8bc3d42e/transformed/startup-runtime-1.1.1/res
-com.example.mentalfitness.app-customview-poolingcontainer-1.0.0-25 /Users/affanlaptops/.gradle/caches/transforms-3/fd13331846a29ff9dfb44e2fcfca7036/transformed/customview-poolingcontainer-1.0.0/res
-com.example.mentalfitness.app-activity-1.6.0-26 /Users/affanlaptops/.gradle/caches/transforms-3/fea25f6c67d7a8ba83e98cb7e1a0b2fe/transformed/activity-1.6.0/res
-com.example.mentalfitness.app-lifecycle-viewmodel-savedstate-2.5.1-27 /Users/affanlaptops/.gradle/caches/transforms-3/feff4380a54374ab601ccad48c8b2491/transformed/lifecycle-viewmodel-savedstate-2.5.1/res
-com.example.mentalfitness.app-camera-lifecycle-1.2.3-28 /Users/affanlaptops/.gradle/caches/transforms-3/ffef37404c13594d15252b5bf6abfe6f/transformed/camera-lifecycle-1.2.3/res
-com.example.mentalfitness.app-pngs-29 /Users/affanlaptops/Documents/project 4/app/build/generated/res/pngs/debug
-com.example.mentalfitness.app-resValues-30 /Users/affanlaptops/Documents/project 4/app/build/generated/res/resValues/debug
-com.example.mentalfitness.app-packageDebugResources-31 /Users/affanlaptops/Documents/project 4/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-com.example.mentalfitness.app-packageDebugResources-32 /Users/affanlaptops/Documents/project 4/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-com.example.mentalfitness.app-merged_res-33 /Users/affanlaptops/Documents/project 4/app/build/intermediates/merged_res/debug
-com.example.mentalfitness.app-debug-34 /Users/affanlaptops/Documents/project 4/app/src/debug/res
-com.example.mentalfitness.app-main-35 /Users/affanlaptops/Documents/project 4/app/src/main/res
+com.example.mentalfitness.app-lifecycle-viewmodel-2.5.1-0 /Users/affanlaptops/.gradle/caches/transforms-3/04e544543093e494943e1c6beeecf617/transformed/lifecycle-viewmodel-2.5.1/res
+com.example.mentalfitness.app-drawerlayout-1.1.1-1 /Users/affanlaptops/.gradle/caches/transforms-3/10a4e8bf62947c2d851ce1d4afdf1582/transformed/drawerlayout-1.1.1/res
+com.example.mentalfitness.app-customview-poolingcontainer-1.0.0-2 /Users/affanlaptops/.gradle/caches/transforms-3/12b8911cc3e60d3f2d2c7f6168de418f/transformed/customview-poolingcontainer-1.0.0/res
+com.example.mentalfitness.app-lifecycle-runtime-2.5.1-3 /Users/affanlaptops/.gradle/caches/transforms-3/1c093d8bedd5371451ddedf7bd1816d4/transformed/lifecycle-runtime-2.5.1/res
+com.example.mentalfitness.app-appcompat-1.6.1-4 /Users/affanlaptops/.gradle/caches/transforms-3/23824d76e9972f9f4c6e50c0f2e89b6f/transformed/appcompat-1.6.1/res
+com.example.mentalfitness.app-camera-lifecycle-1.2.3-5 /Users/affanlaptops/.gradle/caches/transforms-3/2996cf055b8bc2d4827b818f8f0fc286/transformed/camera-lifecycle-1.2.3/res
+com.example.mentalfitness.app-core-ktx-1.9.0-6 /Users/affanlaptops/.gradle/caches/transforms-3/366c32781ad378d640e35ecb47dd5b5b/transformed/core-ktx-1.9.0/res
+com.example.mentalfitness.app-transition-1.2.0-7 /Users/affanlaptops/.gradle/caches/transforms-3/398de88be5182f0da5463f76571fece2/transformed/transition-1.2.0/res
+com.example.mentalfitness.app-viewpager2-1.0.0-8 /Users/affanlaptops/.gradle/caches/transforms-3/3c8384da52f4a2abe723911f79f18abf/transformed/viewpager2-1.0.0/res
+com.example.mentalfitness.app-lifecycle-livedata-core-2.5.1-9 /Users/affanlaptops/.gradle/caches/transforms-3/51bdb18e8633e778e91fd80d97638ca9/transformed/lifecycle-livedata-core-2.5.1/res
+com.example.mentalfitness.app-material-1.9.0-10 /Users/affanlaptops/.gradle/caches/transforms-3/581771c82ae2252b20c6a5f28cdcde81/transformed/material-1.9.0/res
+com.example.mentalfitness.app-coordinatorlayout-1.1.0-11 /Users/affanlaptops/.gradle/caches/transforms-3/5999947db6c5fdd3d161995fe3e3e00a/transformed/coordinatorlayout-1.1.0/res
+com.example.mentalfitness.app-fragment-1.3.6-12 /Users/affanlaptops/.gradle/caches/transforms-3/5c7d88a3812c7ac0d8f0116c0b0f4abf/transformed/fragment-1.3.6/res
+com.example.mentalfitness.app-camera-core-1.2.3-13 /Users/affanlaptops/.gradle/caches/transforms-3/6d1d9018ecd0174990687873bae98c33/transformed/camera-core-1.2.3/res
+com.example.mentalfitness.app-browser-1.4.0-14 /Users/affanlaptops/.gradle/caches/transforms-3/746ef2d562b7128b3cb9fa4b398f0460/transformed/browser-1.4.0/res
+com.example.mentalfitness.app-activity-1.6.0-15 /Users/affanlaptops/.gradle/caches/transforms-3/79cb1d9d8e51cf32fe6dc364e5f3d0d5/transformed/activity-1.6.0/res
+com.example.mentalfitness.app-ads-adservices-1.0.0-beta05-16 /Users/affanlaptops/.gradle/caches/transforms-3/7bf97aca0d0ed9c11902b308f86e5389/transformed/ads-adservices-1.0.0-beta05/res
+com.example.mentalfitness.app-recyclerview-1.3.0-17 /Users/affanlaptops/.gradle/caches/transforms-3/7dfccc44f86f6b040356aa85598102a8/transformed/recyclerview-1.3.0/res
+com.example.mentalfitness.app-ads-adservices-java-1.0.0-beta05-18 /Users/affanlaptops/.gradle/caches/transforms-3/80647df1a30dc353b764a8b70025ca52/transformed/ads-adservices-java-1.0.0-beta05/res
+com.example.mentalfitness.app-firebase-common-20.4.2-19 /Users/affanlaptops/.gradle/caches/transforms-3/80e3372210b05b8a38a65f234536aaa2/transformed/firebase-common-20.4.2/res
+com.example.mentalfitness.app-lifecycle-viewmodel-savedstate-2.5.1-20 /Users/affanlaptops/.gradle/caches/transforms-3/833e95c89cb94f4bfa10a2b87864df82/transformed/lifecycle-viewmodel-savedstate-2.5.1/res
+com.example.mentalfitness.app-constraintlayout-2.1.4-21 /Users/affanlaptops/.gradle/caches/transforms-3/861b519ead45c5f2908dfa9d438fbf00/transformed/constraintlayout-2.1.4/res
+com.example.mentalfitness.app-emoji2-views-helper-1.2.0-22 /Users/affanlaptops/.gradle/caches/transforms-3/94e25f1491f881b92a3c12b85a811282/transformed/emoji2-views-helper-1.2.0/res
+com.example.mentalfitness.app-play-services-measurement-api-21.5.0-23 /Users/affanlaptops/.gradle/caches/transforms-3/98fb6a5414314f92c5644c65608e044c/transformed/play-services-measurement-api-21.5.0/res
+com.example.mentalfitness.app-camera-camera2-1.2.3-24 /Users/affanlaptops/.gradle/caches/transforms-3/9fbeef7359ddf9fda5ee8221ccf443d2/transformed/camera-camera2-1.2.3/res
+com.example.mentalfitness.app-lifecycle-process-2.4.1-25 /Users/affanlaptops/.gradle/caches/transforms-3/a5fef786d8ba6664a14dbb36a974fed4/transformed/lifecycle-process-2.4.1/res
+com.example.mentalfitness.app-camera-view-1.2.3-26 /Users/affanlaptops/.gradle/caches/transforms-3/ba9c3fb5197704a22c8c9a2e5efb5e6a/transformed/camera-view-1.2.3/res
+com.example.mentalfitness.app-play-services-base-18.0.1-27 /Users/affanlaptops/.gradle/caches/transforms-3/c11fd6c27c255c7cd79356ed7db0c2fe/transformed/play-services-base-18.0.1/res
+com.example.mentalfitness.app-startup-runtime-1.1.1-28 /Users/affanlaptops/.gradle/caches/transforms-3/db047aa98a30c0abca6b16ebfa5c9829/transformed/startup-runtime-1.1.1/res
+com.example.mentalfitness.app-appcompat-resources-1.6.1-29 /Users/affanlaptops/.gradle/caches/transforms-3/e6c1f3b6f8defa74bebe94b46da24980/transformed/appcompat-resources-1.6.1/res
+com.example.mentalfitness.app-annotation-experimental-1.3.0-30 /Users/affanlaptops/.gradle/caches/transforms-3/e76e64ebc95ffea4e819a4046f3467c8/transformed/annotation-experimental-1.3.0/res
+com.example.mentalfitness.app-emoji2-1.2.0-31 /Users/affanlaptops/.gradle/caches/transforms-3/f025b7926a2f63f069f361e7b41b45d2/transformed/emoji2-1.2.0/res
+com.example.mentalfitness.app-play-services-basement-18.1.0-32 /Users/affanlaptops/.gradle/caches/transforms-3/f1bf309e017be3d7ad765a88e40b392e/transformed/play-services-basement-18.1.0/res
+com.example.mentalfitness.app-savedstate-1.2.0-33 /Users/affanlaptops/.gradle/caches/transforms-3/f93611272aa7961fca690cd22320b082/transformed/savedstate-1.2.0/res
+com.example.mentalfitness.app-cardview-1.0.0-34 /Users/affanlaptops/.gradle/caches/transforms-3/fe179af98f317ac4af669126b586ec22/transformed/cardview-1.0.0/res
+com.example.mentalfitness.app-core-1.9.0-35 /Users/affanlaptops/.gradle/caches/transforms-3/ff6ab652db626191847188fafa0a6161/transformed/core-1.9.0/res
+com.example.mentalfitness.app-google-services-36 /Users/affanlaptops/Documents/project 4/app/build/generated/res/google-services/debug
+com.example.mentalfitness.app-pngs-37 /Users/affanlaptops/Documents/project 4/app/build/generated/res/pngs/debug
+com.example.mentalfitness.app-resValues-38 /Users/affanlaptops/Documents/project 4/app/build/generated/res/resValues/debug
+com.example.mentalfitness.app-packageDebugResources-39 /Users/affanlaptops/Documents/project 4/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.example.mentalfitness.app-packageDebugResources-40 /Users/affanlaptops/Documents/project 4/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.example.mentalfitness.app-merged_res-41 /Users/affanlaptops/Documents/project 4/app/build/intermediates/merged_res/debug
+com.example.mentalfitness.app-debug-42 /Users/affanlaptops/Documents/project 4/app/src/debug/res
+com.example.mentalfitness.app-main-43 /Users/affanlaptops/Documents/project 4/app/src/main/res

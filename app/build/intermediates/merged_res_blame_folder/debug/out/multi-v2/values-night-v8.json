@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mentalfitness.app-mergeDebugResources-31:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.mentalfitness.app-mergeDebugResources-39:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/affanlaptops/.gradle/caches/transforms-3/9aaaf5da9a65b3cbd15e6a22f82ed8f1/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
+                    "source": "/Users/affanlaptops/.gradle/caches/transforms-3/23824d76e9972f9f4c6e50c0f2e89b6f/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/affanlaptops/.gradle/caches/transforms-3/5ccec04eabfa88a4036cb87d71914154/transformed/material-1.9.0/res/values-night-v8/values-night-v8.xml",
+                    "source": "/Users/affanlaptops/.gradle/caches/transforms-3/581771c82ae2252b20c6a5f28cdcde81/transformed/material-1.9.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

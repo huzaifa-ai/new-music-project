@@ -48,6 +48,7 @@ id appTitle
 id assessmentCard
 id assessmentRemindersSwitch
 id assessmentTitleText
+id authButton
 id bodyFatEditText
 id bodyFatLabel
 id buttonLayout
@@ -58,12 +59,14 @@ id chartsCard
 id checkboxContainer
 id clearButton
 id clearDataButton
+id confirmPasswordEditText
 id currentArtistText
 id currentDateText
 id currentTrackText
 id currentWeatherText
 id darkModeSwitch
 id detectionStatusText
+id emailEditText
 id emotionRow1
 id emotionRow2
 id emotionStatusText
@@ -71,6 +74,7 @@ id energeticCard
 id entriesContainer
 id entryTitle
 id facialExpressionCard
+id formTitleTextView
 id genderLabel
 id genderSpinner
 id happyCard
@@ -81,9 +85,8 @@ id journalEntryCard
 id journalEntryEdit
 id journalingCard
 id lastAssessmentText
-id loginButton
-id loginTitleTextView
 id logoImageView
+id logoutButton
 id moodChartContainer
 id moodChartTitle
 id moodEditText
@@ -128,7 +131,7 @@ id suggestionsContainer
 id temperatureText
 id termsOfServiceButton
 id titleTextView
-id usernameEditText
+id toggleModeTextView
 id vo2MaxEditText
 id vo2MaxLabel
 id weatherCard
@@ -148,6 +151,7 @@ layout activity_music
 layout activity_settings
 layout activity_weather
 layout activity_workout
+string already_have_account
 string app_logo
 string app_name
 string assessment
@@ -155,8 +159,16 @@ string assessment_icon
 string calories_icon
 string charts
 string charts_icon
+string confirm_password
+string dont_have_account
+string email
 string facial_expression_analysis
 string facial_expression_icon
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string journal_icon
 string journaling
 string login
@@ -166,6 +178,8 @@ string music_health_icon
 string music_health_recommendation
 string music_icon
 string password
+string project_id
+string register
 string steps_icon
 string username
 string weather_based_suggestion

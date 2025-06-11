@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.Switch;
 import android.widget.Toast;
 import androidx.cardview.widget.CardView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -18,11 +19,13 @@ public class SettingsActivity extends AppCompatActivity {
     private Button privacyPolicyButton;
     private Button termsOfServiceButton;
     private Button clearDataButton;
+    private Button logoutButton;
     private CardView homeBottomNav;
     private CardView settingsBottomNav;
     
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,9 @@ public class SettingsActivity extends AppCompatActivity {
         // Initialize SharedPreferences
         sharedPreferences = getSharedPreferences("MentalFitnessPrefs", MODE_PRIVATE);
         editor = sharedPreferences.edit();
+        
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
 
         initializeViews();
         loadSavedPreferences();
@@ -45,6 +51,7 @@ public class SettingsActivity extends AppCompatActivity {
         privacyPolicyButton = findViewById(R.id.privacyPolicyButton);
         termsOfServiceButton = findViewById(R.id.termsOfServiceButton);
         clearDataButton = findViewById(R.id.clearDataButton);
+        logoutButton = findViewById(R.id.logoutButton);
         homeBottomNav = findViewById(R.id.homeBottomNav);
         settingsBottomNav = findViewById(R.id.settingsBottomNav);
     }
@@ -105,6 +112,24 @@ public class SettingsActivity extends AppCompatActivity {
             assessmentRemindersSwitch.setChecked(true);
             
             Toast.makeText(this, "All data cleared successfully", Toast.LENGTH_LONG).show();
+        });
+
+        // Logout button
+        logoutButton.setOnClickListener(v -> {
+            // Sign out from Firebase
+            mAuth.signOut();
+            
+            // Clear any stored user data
+            editor.clear();
+            editor.apply();
+            
+            // Navigate back to login screen
+            Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+            
+            Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show();
         });
 
         // Bottom navigation
